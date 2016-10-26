@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					7CE520531DBEF8220096EB65 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VZ4C3W749T;
 						ProvisioningStyle = Automatic;
 					};
 					7CE5206C1DBEF8220096EB65 = {
@@ -422,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VZ4C3W749T;
 				INFOPLIST_FILE = SpeechTOTextDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.SpeechTOTextDemo;
@@ -433,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VZ4C3W749T;
 				INFOPLIST_FILE = SpeechTOTextDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soooner.SpeechTOTextDemo;

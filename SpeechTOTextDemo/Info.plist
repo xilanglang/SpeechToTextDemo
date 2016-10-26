@@ -34,5 +34,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>允许NF-iOS访问你的麦克风，以便提供更准确的信息</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>允许NF-iOS使用语言识别，以便提供更准确的信息</string>
 </dict>
 </plist>

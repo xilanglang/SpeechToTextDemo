@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What can I help you with?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WU-8K-AHZ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is the UITextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-y7-2F4" userLabel="textView">
+                                <color key="backgroundColor" red="0.78161703019999995" green="0.78823536630000002" blue="0.082352943720000002" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxF-Tb-nMM" userLabel="microphoneButton">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ocJ-fC-1p7"/>
+                                    <constraint firstAttribute="height" constant="30" id="xpP-D7-WSh"/>
+                                </constraints>
+                                <state key="normal" title="Start recoding"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwK-PO-C8A"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qor-y7-2F4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="2au-oL-Bqj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qor-y7-2F4" secondAttribute="trailing" constant="10" id="CYh-Mn-82l"/>
+                            <constraint firstItem="Qor-y7-2F4" firstAttribute="top" secondItem="5WU-8K-AHZ" secondAttribute="bottom" constant="20" id="ITU-xL-fZJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5WU-8K-AHZ" secondAttribute="trailing" constant="10" id="KF6-gI-RvK"/>
+                            <constraint firstItem="dxF-Tb-nMM" firstAttribute="top" secondItem="Qor-y7-2F4" secondAttribute="bottom" constant="80" id="KzR-9L-7dj"/>
+                            <constraint firstItem="dxF-Tb-nMM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dvS-fm-A2D"/>
+                            <constraint firstItem="5WU-8K-AHZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="fdU-ak-BAA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dxF-Tb-nMM" secondAttribute="bottom" constant="40" id="j5u-IO-LGW"/>
+                            <constraint firstItem="5WU-8K-AHZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="tlK-rg-IWL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="microphoneButton" destination="dxF-Tb-nMM" id="gru-vA-ekh"/>
+                        <outlet property="textView" destination="Qor-y7-2F4" id="Kwa-gN-GG6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="122.28260869565219"/>
         </scene>
     </scenes>
 </document>
